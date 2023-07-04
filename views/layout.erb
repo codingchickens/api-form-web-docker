@@ -3,9 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>API-form Rails</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 </head>
 <body>
-    
+  <%= erb :navbar %> 
+<h1>Integración API Form - Rails</h1>
+<p>API de gestión de datos de formularios de contacto</p>
+<p>La aplicación se utiliza para enviar datos, alojándolos en hojas de cálculo de Google y a través de correo electrónico</p>
+
+<form id="contact-form" action="https://apiforms.codingchickens.com/form-submit" method="post">
+  <div>
+      <div class="control">
+          <input id="nombre" name="first_name" placeholder="Nombre" class="input">
+      </div>
+      <div class="control">
+        <input id="apellido" name="last_name" placeholder="Apellido" class="input">
+    </div>
+      <div class="control">
+          <input id="telefono" name="phone_number" placeholder="Teléfono" class="input">
+      </div>
+      <div class="control">
+          <input id="email" name="email" placeholder="email" class="input">
+      </div>
+      <div class="field">
+  <!-- <label class="label">Label</label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Text input">
+  </div>
+  <p class="help">This is a help text</p> -->
+</div>
+  </div>
+  <div>
+      <div>
+          <textarea id="content" name="content" placeholder="¡Escribe tu mensaje!" class="textarea"></textarea>
+      </div>
+      <div>
+          <button class="g-recaptcha button is-responsive" data-sitekey="" data-callback="onSubmit" data-action="submit">Enviar</button>
+      </div>
+  </div>
+</form>
 </body>
 </html>
