@@ -6,6 +6,17 @@
     <title>API-form Rails</title>
     <link rel="stylesheet" href="mystyle.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <%# Carga la API de JavaScript. %>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <%# Falta el token %>
+
+    <%#Función de devolución de llamada para controlar el token. %>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("contact-form").submit();
+      }
+    </script>
+
 </head>
 <body>
   <%= erb :navbar %> 
@@ -35,7 +46,10 @@
           <textarea id="content" name="content" placeholder="¡Escribe tu mensaje!" class="textarea" style="padding:10px; border-radius:16px"></textarea>
       </div>
       <div>
-          <button class="g-recaptcha button is-responsive" data-sitekey="" data-callback="onSubmit" data-action="submit">Enviar</button>
+      <button class="g-recaptcha" 
+        data-sitekey="reCAPTCHA_site_key" 
+        data-callback='onSubmit' 
+        data-action='submit'>Enviar</button>
       </div>
   </div>
 </form>
