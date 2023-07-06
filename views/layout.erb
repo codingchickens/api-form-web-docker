@@ -9,35 +9,30 @@
 </head>
 <body>
   <%= erb :navbar %> 
-<h1>Integración API Form - Rails</h1>
-<p>API de gestión de datos de formularios de contacto</p>
-<p>La aplicación se utiliza para enviar datos, alojándolos en hojas de cálculo de Google y a través de correo electrónico</p>
-
+<div class="content">
+  <h1 class="title is-1">Integración API Form - Rails</h1>
+  <p>API de gestión de datos de formularios de contacto<br/>La aplicación se utiliza para enviar datos, alojándolos en hojas de cálculo de Google y a través de correo electrónico</p>
+</div>
 <form id="contact-form" action="https://apiforms.codingchickens.com/form-submit" method="post">
-  <div>
-      <div class="control">
+  <div class="center">
+      <div class="control" style="padding:10px; border-radius:16px">
           <input id="nombre" name="first_name" placeholder="Nombre" class="input">
       </div>
-      <div class="control">
+      <div class="control" style="padding:10px; border-radius:16px">
         <input id="apellido" name="last_name" placeholder="Apellido" class="input">
     </div>
-      <div class="control">
+      <div class="control" style="padding:10px; border-radius:16px">
           <input id="telefono" name="phone_number" placeholder="Teléfono" class="input">
       </div>
-      <div class="control">
-          <input id="email" name="email" placeholder="email" class="input">
+      <div class="control" style="padding:10px; border-radius:16px">
+          <input id="email" name="email" placeholder="Email" class="input">
       </div>
       <div class="field">
-  <!-- <label class="label">Label</label>
-  <div class="control">
-    <input class="input" type="text" placeholder="Text input">
-  </div>
-  <p class="help">This is a help text</p> -->
 </div>
   </div>
   <div>
       <div>
-          <textarea id="content" name="content" placeholder="¡Escribe tu mensaje!" class="textarea"></textarea>
+          <textarea id="content" name="content" placeholder="¡Escribe tu mensaje!" class="textarea" style="padding:10px; border-radius:16px"></textarea>
       </div>
       <div>
           <button class="g-recaptcha button is-responsive" data-sitekey="" data-callback="onSubmit" data-action="submit">Enviar</button>
