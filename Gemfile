@@ -7,5 +7,3 @@ gem "sinatra"
 
 # gem "puma"
 gem  "puma"
-
-gem "middleman"
