@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+  api_form_web:
+    build:
+      context: .
+      dockerfile: ./api_form_web.Dockerfile
+    command: bash -c "bundle exec rackup --host 0.0.0.0 -p 4567"
+  nginx:
+    build:
+      context: .
+      dockerfile: ./nginx.Dockerfile
+    depends_on:
+      - api_form_web
+    ports:
+      - 80:80
