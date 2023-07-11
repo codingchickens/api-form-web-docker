@@ -1,5 +1,5 @@
 build:
   docker:
-    web: Dockerfile
+    web: api_form_web.Dockerfile
 run:
   web: bundle exec puma -C config/puma.rb
