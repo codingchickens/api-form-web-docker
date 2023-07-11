@@ -2,4 +2,4 @@ build:
   docker:
     web: api_form_web.Dockerfile
 run:
-  web: bundle exec puma -C config/puma.rb
+  web: bundle exec puma
